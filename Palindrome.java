@@ -7,7 +7,14 @@ public class Palindrome {
 	
 	/** Checks if the given string is a palindrome. */
 	public static boolean isPalindrome(String s) {
+		int length = s.length();
+		if (length == 0 || length == 1){
+			return true;
+		}
+		if (s.charAt(0) != s.charAt(length - 1)) {
+			return false;
+		}
 		//// Replace the followaing statement with your code
-		return false;
+		return isPalindrome(s.substring(1, length - 1));
     }
 }
